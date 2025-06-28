@@ -17,11 +17,16 @@ Output: "The late fee is $2.50."
 */
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
-
+const calculateLateFee = function(days) {
+   const feePerDay = 0.25;
+   const totalFee = days * feePerDay;
+   console.log(`The late fee is $${totalFee.toFixed(2)}.`);
+}
 
 
 // Extra Task:
 // - Convert the function into a function expression.
+//-AYUUB YUSUF---I did that above by using a function expression for the original function.
 
 
 
@@ -45,11 +50,40 @@ Output: "Red: You are passionate and bold."
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
 
+const favoriteColorFinder = function(color) {
+      if (color.toLowerCase() === 'blue') {
+            return "Blue: You love calm and peace.";
+      } else if (color.toLowerCase() === 'red') {
+            return "Red: You are passionate and bold.";
+      } else if (color.toLowerCase() === 'green') {
+            return "Green: You are connected to nature.";
+      } else if (color.toLowerCase() === 'yellow') {
+            return "Yellow: You radiate happiness and energy.";
+      } else {
+            return "That's a unique choice!";
+      }
 
+}
+console.log(favoriteColorFinder('blue')); // Example usage
 
 // Extra Task:
 // - Rewrite the function using an arrow function.
 
+const favoriteColorFinderArrow = (color) => {
+   switch(color.toLowerCase()) {
+      case 'blue':
+            return "Blue: You love calm and peace.";
+      case 'red':
+            return "Red: You are passionate and bold.";
+      case 'green':
+            return "Green: You are connected to nature.";
+      case 'yellow':
+            return "Yellow: You radiate happiness and energy.";
+      default:
+            return "That's a unique choice!";
+   }
+
+}
 
 
 /*
@@ -67,11 +101,16 @@ Output: "Case #12345: John Doe's case is now logged."
 */
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
+const logCase = function(clientName, caseNumber) {
+   console.log(`Case #${caseNumber}: ${clientName}'s case is now logged.`);
+}
+logCase("John Doe", 12345); // Example usage
 
 
 
 // Extra Task:
 // - Rewrite the function as an arrow function.
+
 
 
 /*
@@ -93,13 +132,29 @@ Output: "Amina is present."
 */
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
+const markAttendance = function(studentName, isPresent) {
+   if (isPresent) {
+      console.log(`${studentName} is present.`);
+   } else {
+      console.log(`${studentName} is absent.`);
+   }
+}
 
-
+markAttendance("Amina", true); // Example usage
+markAttendance("Ali", false); // Example usage
 
 // Extra Task:
 // - Convert the function into a function expression.
 
+const markAttendanceFunction = function(studentName, isPresent) {
+   if (isPresent) {
+      console.log(`${studentName} is present.`);
+   } else {
+      console.log(`${studentName} is absent.`);
+   }
+}
 
+markAttendance("Amina", true); // Example usage
 
 /*
 STRETCH TASK: Student Grade Report Generator 🏈🏈🏈🏈
